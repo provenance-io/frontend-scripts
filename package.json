@@ -18,7 +18,7 @@
   },
   "scripts": {
     "pro": "./bin/index.js",
-    "publish": "npm publish --access public"
+    "publish:public": "npm publish --access public"
   },
   "dependencies": {
     "colors": "1.4.0",
