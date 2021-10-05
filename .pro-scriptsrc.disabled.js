@@ -10,11 +10,11 @@ module.exports = {
     importTextHook: name => 'importTextHook --- test',
   },
   paths: {
-    pathRoot: './srcz',
-    pathRedux: './srcz/reduxz',
-    pathComponents: './srcz/Componentz',
-    pathActions: './srcz/reduxz/actionsz',
-    pathReducers: './srcz/reduxz/reducersz',
-    pathHooks: './srcz/reduxz/hooksz',
+    pathRoot: './src',
+    pathRedux: './src/redux',
+    pathComponents: './src/Component',
+    pathActions: './src/redux/actions',
+    pathReducers: './src/redux/reducers',
+    pathHooks: './src/redux/hooks',
   },
 };

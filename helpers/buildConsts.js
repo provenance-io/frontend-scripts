@@ -7,8 +7,8 @@ const { paths } = require('../consts/paths.js');
 exports.buildConsts = async () => {
   try {
     // Try to find rc file
-    const overrides = require('../.v-scriptsrc.js');
-    console.log(`Action: .v-scriptsrc overides found, consts updated.`.dim.gray);
+    const overrides = require('../.pro-scriptsrc.js');
+    console.log(`Action: .pro-scriptsrc overides found, consts updated.`.dim.gray);
     // Initial/default consts
     const { paths: rcPaths, indexText: rcIndexText } = overrides;
     // Replace any paths as needed or use the defaults
@@ -61,11 +61,11 @@ exports.buildConsts = async () => {
   }
   catch (err) {
     if (err instanceof Error && err.code === 'MODULE_NOT_FOUND') {
-      console.log(`Action: .v-scriptsrc not found, using default consts`.dim.gray);
+      console.log(`Action: .pro-scriptsrc not found, using default consts`.dim.gray);
       return {paths, indexText};
     }
     else {
-      throw new Error(`Unable to build constants.  Check .v-scriptsrc.js file format. (${err})`);
+      throw new Error(`Unable to build constants.  Check .pro-scriptsrc.js file format. (${err})`);
     }
   }
 };

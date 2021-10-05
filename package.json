@@ -1,16 +1,16 @@
 {
-  "name": "@vm-figure/v-script",
-  "version": "1.0.10",
+  "name": "@provenance-io/frontend-scripts",
+  "version": "1.0.0",
   "preferGlobal": true,
   "engines": { "node": ">=14.0.0"},
   "engineStrict": true,
   "keywords": ["react component quick builder", "react redux store and component quick commands", "redux store quick build"],
   "main": "./index.js",
   "bin": {
-    "vs": "./bin/index.js"
+    "pro": "./bin/index.js"
   },
   "scripts": {
-    "vs": "./bin/index.js"
+    "pro": "./bin/index.js"
   },
   "dependencies": {
     "colors": "1.4.0",
