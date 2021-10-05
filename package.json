@@ -1,6 +1,7 @@
 {
   "name": "@provenance-io/frontend-scripts",
   "version": "1.0.0",
+  "private": false,
   "preferGlobal": true,
   "engines": { "node": ">=14.0.0"},
   "engineStrict": true,
@@ -10,7 +11,8 @@
     "pro": "./bin/index.js"
   },
   "scripts": {
-    "pro": "./bin/index.js"
+    "pro": "./bin/index.js",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "colors": "1.4.0",
