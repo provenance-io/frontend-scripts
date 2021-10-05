@@ -12,7 +12,7 @@ switch (flags) {
   case '-v': // fallthrough
   case '-version': // fallthrough
   case 'version': {
-    console.log(`v-scripts version: ${version}`.dim.green);
+    console.log(`pro-scripts version: ${version}`.dim.green);
     break;
   }
   case '-r': // fallthrough
@@ -27,5 +27,5 @@ switch (flags) {
     createCommand();
     break;
   }
-  default: console.log('Unknown command.  V-scripts possible commands: -v (version), -c (create), -r (remove)'.dim.yellow);
+  default: console.log('Unknown command.  Pro-scripts possible commands: -v (version), -c (create), -r (remove)'.dim.yellow);
 };
