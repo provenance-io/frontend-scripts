@@ -36,20 +36,21 @@ exports.createReduxStore = async (consts) => {
     // ---------------
     const { name } = await promptUser({ type: 'input', name: 'name', message: "What is this Redux store's name?"})
     const lowercaseName = name.substring(0, 1).toLowerCase() + name.substring(1);
+    const capitalizedName = name.substring(0,1).toUpperCase() + name.substring(1);
     // ----------------------------------------
     // Make sure Store doesn't already exist
     // ----------------------------------------
-    const storeAlreadyExists = await pathExists(`${pathReducers}/${name}`, 'nothrow');
+    const storeAlreadyExists = await pathExists(`${pathReducers}/${lowercaseName}Reducer.js`, 'nothrow');
     if (storeAlreadyExists) { throw new Error(`Unable to create Redux store "${name}", it already exists.`)}
     else { console.log(`Test: "${name}" Redux store doesn't already exist.`.dim.green); }
     // --------------------------------------------
     // Update index files, then update templates
     // --------------------------------------------
     await appendIndex('action', `${lowercaseName}Actions`, consts);
-    await appendIndex('hook', `use${name}`, consts);
+    await appendIndex('hook', `use${capitalizedName}`, consts);
     await appendIndex('reducer', `${lowercaseName}Reducer`, consts);
     await copyTemplate('actions.js', `${pathActions}/${lowercaseName}Actions.js`, name);
-    await copyTemplate('hooks.js', `${pathHooks}/use${name}.js`, name);
+    await copyTemplate('hooks.js', `${pathHooks}/use${capitalizedName}.js`, name);
     await copyTemplate('reducers.js', `${pathReducers}/${lowercaseName}Reducer.js`, name);
     // ------------------------
     // Create Redux Completed
