@@ -1,11 +1,17 @@
 {
   "name": "@provenance-io/frontend-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/provenance-io/frontend-scripts"
+  },
+  "description": "Scripts to quickly create React and Redux components, files, folders, and store items",
   "private": false,
   "preferGlobal": true,
   "engines": { "node": ">=14.0.0"},
   "engineStrict": true,
-  "keywords": ["react component quick builder", "react redux store and component quick commands", "redux store quick build"],
+  "keywords": ["react component quick builder", "react redux store and component quick commands", "redux store quick build", "Provenance.io", "Frontend Scripts"],
   "main": "./index.js",
   "bin": {
     "pro": "./bin/index.js"
